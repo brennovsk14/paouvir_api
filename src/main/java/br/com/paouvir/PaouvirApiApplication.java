@@ -1,4 +1,4 @@
-package com.example.paouvir_api;
+package br.com.paouvir;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
