@@ -18,11 +18,7 @@ public class Banda implements Comparable<Banda>{
 
     @Override
     public String toString() {
-        return "Banda{" +
-                "nome ='" + nome + '\'' +
-                ", albuns =" + albuns +
-                ", musicas =" + musicas +
-                '}';
+        return "Banda(" + "nome =" + nome + ", albuns =" + albuns + ", musicas =" + musicas + ')';
     }
 
     @Override

@@ -1,6 +1,7 @@
 package entities;
 
 public class Principal {
+
     public static void main(String[] args) {
         Banda banda = new Banda("Banda X");
         Album album = new Album("Album Y", banda);

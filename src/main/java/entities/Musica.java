@@ -18,12 +18,7 @@ public class Musica implements Comparable<Musica>{
 
     @Override
     public String toString() {
-        return "Musica{" +
-                "nome='" + nome + '\'' +
-                ", duracao =" + duracao +
-                ", album =" + album +
-                ", banda =" + banda +
-                '}';
+        return "Musica(" + "nome=" + nome  + ", duracao =" + duracao + " minutos" + ", album =" + album + ", banda =" + banda + ')';
     }
 
     @Override

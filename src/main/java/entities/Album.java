@@ -18,11 +18,7 @@ public class Album implements Comparable<Album>{
 
     @Override
     public String toString() {
-        return "Album{" +
-                "nome ='" + nome + '\'' +
-                ", musicas =" + musicas +
-                ", banda =" + banda +
-                '}';
+        return "Album(" + "nome =" + nome + ", musicas =" + musicas + ", banda =" + banda + ')';
     }
 
     @Override
