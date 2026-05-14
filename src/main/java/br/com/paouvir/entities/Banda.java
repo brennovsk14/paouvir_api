@@ -1,5 +1,4 @@
-package entities;
-import org.jspecify.annotations.NonNull;
+package br.com.paouvir.entities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,21 +7,23 @@ public class Banda implements Comparable<Banda>{
 
     private String nome;
     private List<Album> albuns;
-    private List<Musica> musicas;
+    private Double Nota;
+    private String resumo;
+
+    public Banda() {}
 
     public Banda(String nome) {
         this.nome = nome;
-        this.albuns = new ArrayList<>();
-        this.musicas = new ArrayList<>();
     }
 
     @Override
     public String toString() {
-        return "Banda(" + "nome =" + nome + ", albuns =" + albuns + ", musicas =" + musicas + ')';
+        return "Banda(" + "nome =" + nome + ", albuns =" + albuns +  ", nota =" + Nota + ')';
     }
 
     @Override
     public int compareTo( Banda outraBanda) {
-        return 0;
+
+        return this.nome.compareTo(outraBanda.nome);
     }
 }
