@@ -1,5 +1,7 @@
 package br.com.paouvir.entities;
 
+import jakarta.persistence.Entity;
+
 public class Principal {
 
     public static void main(String[] args) {

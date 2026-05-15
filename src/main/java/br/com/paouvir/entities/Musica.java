@@ -1,10 +1,20 @@
 package br.com.paouvir.entities;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Musica implements Comparable<Musica>{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String nome;
     private int duracao;
     private String DescricaoResumida;
+    @ManyToOne
+    @JoinColumn(name = "album_id")
+    private Album album;
 
     public Musica() {}
 
