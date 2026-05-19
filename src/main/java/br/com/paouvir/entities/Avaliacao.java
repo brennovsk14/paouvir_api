@@ -1,16 +1,26 @@
 package br.com.paouvir.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import lombok.Getter;
+import lombok.Setter;
+import jakarta.persistence.*;
 
 @Entity
+@Getter
+@Setter
 public class Avaliacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Double nota;
+    private Double nota;
+
+    @ManyToOne
+    private Banda banda;
+
+    @ManyToOne
+    private Album album;
+
+    @ManyToOne
+    private Musica musica;
 }

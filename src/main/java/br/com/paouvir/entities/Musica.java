@@ -1,6 +1,11 @@
 package br.com.paouvir.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 @Entity
 public class Musica implements Comparable<Musica>{
@@ -11,7 +16,7 @@ public class Musica implements Comparable<Musica>{
 
     private String nome;
     private int duracao;
-    private String DescricaoResumida;
+    private String descricaoResumida;
     @ManyToOne
     @JoinColumn(name = "album_id")
     private Album album;

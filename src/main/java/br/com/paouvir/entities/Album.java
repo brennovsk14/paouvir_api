@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 @Entity
 public class Album implements Comparable<Album>{
@@ -14,7 +19,7 @@ public class Album implements Comparable<Album>{
 
     private String nome;
     @OneToMany(mappedBy = "album")
-    private List<Musica> musicas;
+    private List<Musica> musicas = new ArrayList<>();
     private Double nota;
     private Float duracaoTotal;
     @ManyToOne

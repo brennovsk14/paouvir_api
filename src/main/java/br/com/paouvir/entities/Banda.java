@@ -1,8 +1,14 @@
 package br.com.paouvir.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 @Entity
 public class Banda implements Comparable<Banda>{
@@ -13,7 +19,7 @@ public class Banda implements Comparable<Banda>{
 
     private String nome;
     @OneToMany(mappedBy = "banda")
-    private List<Album> albuns;
+    private List<Album> albuns = new ArrayList<>();
     private Double nota;
     private String resumo;
 
